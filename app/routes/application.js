@@ -1,7 +1,12 @@
 import Ember from 'ember'
 
 export default Ember.Route.extend({
-  model() {
-    return this.get('store').findAll('user')
+  queryParams: {
+    q: {
+      refreshModel: true
+    }
+  },
+  model(params) {
+    return this.get('store').query('user', params)
   }
 })
