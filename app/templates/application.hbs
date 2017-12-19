@@ -5,8 +5,9 @@
       {{input
         type='text'
         placeholder='Type here...'
-        value=(mut query)
-        key-up=(action 'updateQuery')
+        query=query
+        value=(mut filter)
+        key-up=(action 'updateFilter')
       }}
     </div>
     <div class='list'>

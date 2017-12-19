@@ -1,26 +1,22 @@
 import Ember from 'ember'
 
 export default Ember.Controller.extend({
-  queryParams: ['q'],
-  q: '',
+  queryParams: ['query'],
   query: '',
+  filter: '',
 
   actions: {
-    updateQuery() {
-      Ember.run.debounce(this, this._query, 250)
+    updateFilter() {
+      Ember.run.debounce(this, this._filter, 250)
     }
   },
 
-  _query() {
-    const query = this.get('query')
+  _filter() {
+    const filter = this.get('filter')
     let newQuery = ''
 
-    if (!query) {
-      newQuery = ''
-    }
-
-    if (query && query.length > 2) {
-      newQuery = query
+    if (filter && filter.length > 2) {
+      newQuery = filter
     }
 
     this.set('q', newQuery)
