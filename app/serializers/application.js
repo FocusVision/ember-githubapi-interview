@@ -5,6 +5,7 @@ export default DS.JSONSerializer.extend({
   keyForAttribute(attr) {
     return Ember.String.underscore(attr)
   },
+  
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     let normalizedPayload = payload
 

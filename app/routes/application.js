@@ -7,6 +7,10 @@ export default Ember.Route.extend({
     }
   },
   model(params) {
-    return this.get('store').query('user', params)
+    if (params && params.q) {
+      return this.get('store').query('user', params)
+    }
+
+    return []
   }
 })

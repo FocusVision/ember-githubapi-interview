@@ -455,6 +455,7 @@ main {
   justify-content: center;
   background: #eee;
   padding: 2rem;
+  height: 100vh;
 }
 
 .content {
@@ -487,8 +488,8 @@ main {
 }
 
 .list {
-  flex: 1;
   background: #fff;
+  flex: 1;
 }
 
 .list-item {
