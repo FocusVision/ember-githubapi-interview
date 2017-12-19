@@ -1,1 +1,25 @@
-{{outlet}}
+<main>
+  <div class='content'>
+    <div class='list-header'>
+      {{input
+        type='text'
+        value=(mut filter)
+      }}
+    </div>
+    <div class='list'>
+      {{#each model as |user|}}
+        <div class='list-item'>
+          <img
+            class='list-avatar'
+            src={{user.avatarUrl}}
+          />
+          {{user.login}}
+        </div>
+      {{else}}
+        <div class='list-empty'>
+          hmm, nothin' here
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</main>
