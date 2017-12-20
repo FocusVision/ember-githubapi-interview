@@ -1,7 +1,10 @@
 import ApplicationAdapter from './application'
 
 export default ApplicationAdapter.extend({
-  urlForQuery({ login }) {
-    return `${this.host}/users/${login}/repos`
+  urlForQuery(query) {
+    const { login } = query
+    delete query.login
+
+    return `${this.buildURL()}/users/${login}/repos`
   }
 })
