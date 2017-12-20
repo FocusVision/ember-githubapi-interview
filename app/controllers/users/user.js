@@ -1,4 +1,11 @@
 import Ember from 'ember'
 
-export default Ember.Controller.extend({
+const {
+  Controller,
+  computed: { reads }
+} = Ember
+
+export default Controller.extend({
+  user: reads('model.user'),
+  repositories: reads('model.repositories')
 })

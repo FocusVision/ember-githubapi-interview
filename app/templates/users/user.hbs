@@ -1,1 +1,24 @@
-user
+<div class='user-details'>
+  <img src={{user.avatarUrl}} class='user-avatar' />
+  <div class='user-details-meta'>
+    <h3>
+      {{user.login}}
+    </h3>
+    <p>
+      {{user.name}}
+    </p>
+  </div>
+</div>
+<h3> Repos </h3>
+<div class='user-repository-list'>
+  {{#each repositories as |repository|}}
+    <a href={{repository.htmlUrl}} target='_blank' class='user-repository-list-item'>
+      <strong>{{repository.name}}</strong>
+      {{repository.description}}
+    </a>
+  {{else}}
+    <div class='list-empty'>
+      No repos yet
+    </div>
+  {{/each}}
+</div>

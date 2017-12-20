@@ -14,5 +14,11 @@ export default Ember.Route.extend({
     }
 
     return []
+  },
+
+  actions: {
+    willTransition() {
+      this.controller.set('q', '')
+    }
   }
 })
