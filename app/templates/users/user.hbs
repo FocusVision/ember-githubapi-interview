@@ -10,9 +10,9 @@
   </div>
 </div>
 <h3> Repos </h3>
-<div class='user-repository-list'>
+<div class='list list-repo'>
   {{#each repositories as |repository|}}
-    <a href={{repository.htmlUrl}} target='_blank' class='user-repository-list-item'>
+    <a href={{repository.htmlUrl}} target='_blank' class='list-item'>
       <strong>{{repository.name}}</strong>
       {{repository.description}}
     </a>

@@ -1,23 +1,17 @@
-.user-repository-list {
+.list-repo {
   display: flex;
   flex-flow: column;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15)
-}
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 
-.user-repository-list-item {
-  background: #fff;
-  padding: 1rem;
-  text-decoration: none;
-  color: inherit;
-}
+  .list-item {
+    flex-flow: column;
+    align-items: flex-start;
+    font-weight: normal;
 
-.user-repository-list-item + .user-repository-list-item {
-  border-top: 1px solid #eee;
-}
-
-.user-repository-list-item strong {
-  display: block;
-  margin-bottom: 0.5rem;
+    strong {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 .user-avatar {
