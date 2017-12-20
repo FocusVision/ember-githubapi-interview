@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNames: ['list-search-filter'],
-  placeholder: 'Type here...',
+  placeholder: 'Search...',
 
   updateQuery() {},
   value: '',
@@ -25,11 +25,12 @@ export default Ember.Component.extend({
   },
 
   filter() {
-    const filter = this.get('value')
+    const value = this.get('value')
+    const length = value && value.length
     let newQuery = ''
 
-    if (filter && filter.length > 2) {
-      newQuery = filter
+    if (length > 2) {
+      newQuery = value
     }
 
     this.updateQuery(newQuery)
