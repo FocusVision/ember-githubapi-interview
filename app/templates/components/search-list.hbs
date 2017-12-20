@@ -1,12 +1,12 @@
 {{#if query}}
   {{#each model as |user|}}
-    <div class='list-item'>
+    {{#link-to 'users.user' user.login class='list-item'}}
       <img
         class='list-avatar'
         src={{user.avatarUrl}}
       />
       {{user.login}}
-    </div>
+    {{/link-to}}
   {{else}}
     <div class='list-empty'>
       Nope
