@@ -1,0 +1,19 @@
+body {
+  font-family: 'helvetica', 'arial', sans-serif;
+  background: #eee;
+  min-height: 100vh;
+}
+
+body > .ember-view {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+}
