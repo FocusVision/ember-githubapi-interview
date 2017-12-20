@@ -2,8 +2,8 @@ import Ember from 'ember'
 
 export default Ember.Route.extend({
   queryParams: {
-    query: {
-      as: 'q',
+    q: {
+      as: 'query',
       refreshModel: true
     }
   },

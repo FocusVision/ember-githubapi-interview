@@ -2,12 +2,9 @@
   <div class='content'>
     {{filter}}
     <div class='list-header'>
-      {{input
-        type='text'
-        placeholder='Type here...'
-        query=query
-        value=(mut filter)
-        key-up=(action 'updateFilter')
+      {{search-filter
+        query=q
+        updateQuery=(action 'updateQuery')
       }}
     </div>
     <div class='list'>

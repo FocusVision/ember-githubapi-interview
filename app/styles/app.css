@@ -448,19 +448,17 @@ template {
 
 body {
   font-family: 'helvetica', 'arial', sans-serif;
+  background: #eee;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
   justify-content: center;
-  background: #eee;
   padding: 2rem;
-  height: 100vh;
 }
 
 .content {
-  display: flex;
-  flex-flow: column;
   max-width: 600px;
   width: 100%;
   background: #eee;
@@ -471,6 +469,11 @@ main {
   background: #f2f2f2;
   display: flex;
   padding: 1rem;
+}
+
+.list-search-filter {
+  display: flex;
+  flex: 1;
 }
 
 .list-header input[type=text] {
