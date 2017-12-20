@@ -19,20 +19,8 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    updateQueryDebounced() {
-      Ember.run.debounce(this, this.filter, 250)
+    updateQuery(value) {
+      this.updateQuery(value)
     }
-  },
-
-  filter() {
-    const value = this.get('value')
-    const length = value && value.length
-    let newQuery = ''
-
-    if (length > 2) {
-      newQuery = value
-    }
-
-    this.updateQuery(newQuery)
   }
 })
